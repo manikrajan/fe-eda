@@ -1,12 +1,13 @@
 # DS 5100 Semester Project
 ##  Food Desert Data Analysis
 
-Research Question 1: where do food deserts occur?
-Research Question 2: how could our project be used to analyze specific areas?
+### Research Questions
+- 1. where do food deserts occur?
+- 2. how could our project be used to analyze specific areas?
 
 TODO: link to google collab folder with all the files already there and runable??
 
-GitHub File Structure:
+#### GitHub File Structure
 - FoodEnvironmentAtlas: folder with raw data downloaded from USDA food environment atlas
   - ReadMeFile2020.txt: file with information about the dataset
   - StateAndCountyData.csv: primary data folder used for our analysis
