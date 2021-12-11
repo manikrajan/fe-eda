@@ -2,8 +2,8 @@
 ##  Food Desert Data Analysis
 
 ### Research Questions
-- 1. where do food deserts occur?
-- 2. how could our project be used to analyze specific areas?
+1. where do food deserts occur?
+2. how could our project be used to analyze specific areas?
 
 TODO: link to google collab folder with all the files already there and runable??
 
