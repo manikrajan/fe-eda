@@ -106,6 +106,20 @@ As another example, here is a scatterplot between diabetes and the most negative
 
 While this state and these variables are just one example, the way we’ve designed our program makes this analysis flexible and repeatable in the future to answer numerous new questions. The analysis of correlations in particular have been very valuable in focusing our analysis from the hundreds of potential variables to just those that are the most closely related to whichever variable we’re interested in at the time. This process allowed us, and will allow future users, to prioritize their time in analyzing and digging deeper into the most important variables.
 
+**UNIT TESTING** 
+
+We developed a class each to clean the data and analyze the data. We performed unit testing on these classes to test the accuracy of the code for data cleaning and analysis. We thoroughly tested cleaning inconsistencies in the dataset like whitespaces using assertEqual(). We have used test fixtures like setup() to set up the test cases.
+We observed that FIPS codes for a few states and counties were missing or unavailable in the dataset during analysis. These inconsistencies were fixed by web scraping. We performed unit testing on the data gathered using web scraping. Testing was done to validate the FIPS code for a State or County.
+
+ ![image](https://user-images.githubusercontent.com/6862254/145697359-fc245afd-e313-46b2-9772-01abf7ec744e.png)
+
+**PROJECT MANAGEMENT**
+
+The team decided to assign roles and responsibilities for everyone in the team. A project plan was prepared, and an owner was assigned for each milestone. The team met weekly over a Zoom call to assess the status of the project. The team discussed the progress and impediments that other team members might have. We, as a team, worked together to resolve any impediments identified. Tools like GitHub and Google Drive were used for collaboration, which proved effective in our development process. This approach enabled us to be more agile and helped us meet deadlines.
+
+**EXTRA CREDIT**
+
+There were inconsistencies related to FIPS code for States and Counties in our dataset. The team decided to web scrape the FIPS code data from USDA’s website to fix the inconsistencies. The team also had used user interaction to analyze specific results. The class for County analysis has functions that would require user interaction to analyze a variable of interest. For instance, Top 10 most significant correlations of a variable with other variables.
 
 
 **CONCLUSION** 
