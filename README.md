@@ -5,7 +5,8 @@
 1. Where do food deserts occur?
 2. How could our project be used to analyze specific areas?
 
-TODO: link to google collab folder with all the files already there and runable??
+Link to Google Colab files:
+https://drive.google.com/drive/u/3/folders/1D4CZXPY-lXHHBmNn4pE4VEumSDWRCkcF
 
 #### GitHub File Structure
 - FoodEnvironmentAtlas: folder with raw data downloaded from USDA food environment atlas
