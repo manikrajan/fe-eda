@@ -18,7 +18,8 @@ https://drive.google.com/drive/u/3/folders/1D4CZXPY-lXHHBmNn4pE4VEumSDWRCkcF
   - State_Level_Data.csv: cleaned state level data
   - TODO: add any other data files used (there's a lot in the google drive so add the ones we need to this list and to github)
 - Python Code: ipynb and py files used for our project
-  - Data_Cleaning_Class.py: definition of class used for cleaning raw data
+  - County_Analysis_Class.ipynb: class used for county analysis
+  - Data_Cleaning_Class.ipynb: definition of class used for cleaning raw data
   - Data_Analysis_And_Visualizations.ipynb: analysis and visualizations used in project
   - Data_Cleaning.ipynb: execution of data cleaning
   - Test_Data_Cleaning_Class.ipynb: unit testing for data cleaning class
