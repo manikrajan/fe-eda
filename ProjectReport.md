@@ -50,7 +50,7 @@ To analyze the relationships of food deserts, we decided to compare the low inco
 
 For population, we found that food deserts were likely to occur in places of smaller populations, meaning that the highest values for low income and low access to food occurred in areas of lower population. As stated earlier, this was expected--we next wanted to verify the difference in these populations was likely connected to metro status.
 
-![img](https://lh6.googleusercontent.com/so_GK5gXtgBs9tX5ZEGqqjQC_ohsfv8MQl7yZoiQkPHvPA13GPaOm-FM8l_ciRSI1KlfiaAyyvylAsFn1ow8baITiQPbywbGXUJDCygmH3V33vqAWDDsC_FS2FB6cG_nAGl-0Iam)
+![image](https://user-images.githubusercontent.com/6862254/145739716-edecd876-8958-40bf-bdee-bfd8d49df3a5.png)
 
 
 
@@ -58,11 +58,11 @@ For population, we found that food deserts were likely to occur in places of sma
 
 Looking at metro status, almost all of the high values for low income and low access to food occur in non-metro areas with low population. The boxplot between non-metro and metro also shows us very clearly that almost all of the high values for low access come from non-metro areas, , thus again confirming that food deserts are more likely to occur in non-metro areas.
 
-![img](https://lh4.googleusercontent.com/3e4xCr5qG_pewcR6HDh7RhyRkuGq1IITqSTCrDy2ppzbzIQbSAfr2ckM5oUP5j0c8IwGGG7JYx5UyXKtEN5Yr7psm-gBOiHuFq77ZIj47qn3WgiTfiw8A9Zv9cfWDKr-XC4Eg_ps)
+![image](https://user-images.githubusercontent.com/6862254/145739748-7ade9e1c-b4d6-41a4-8dfe-5c02067876b0.png)
 
 
 
-![img](https://lh6.googleusercontent.com/Rg0ZyoNdhC2uOegrSGm_0U6mHj5SeF0YUC6ikricrTVIwwL0At-Ole3LUzbxqcPzi52VWrl-mrQU9QE0gtxYsHU0qtDohCHGiNT50_3iBb3hK4XvEL2UQHUNUBgwjMhqSzJj_Scw)
+![image](https://user-images.githubusercontent.com/6862254/145739807-f8ea23e3-aa45-4ae8-a4c5-2509f39d7c90.png)
 
 
 
@@ -70,13 +70,13 @@ Looking at metro status, almost all of the high values for low income and low ac
 
 Across the four different regions, we found that food deserts were least likely to occur in the Northeast and most likely to occur in the West. Southern regions followed closely behind the Western ones, with Midwest around the same range. From this, we can determine that West, South, and Midwest appear to be the most at risk of containing food deserts, while the Northeast region seems relatively safe.
 
-![img](https://lh3.googleusercontent.com/cDMHFbpisggGcJ14g1wNFGe-zd8BWVf9A7hp8pZuuKzou8esN8ScikI1wFH_YGhbgKpXK2RZ6hTFb_W8HRO78B0Mbnede54brgBm--ixKYu72hZKxqXfKEh5R0IYp_dwpZ7xjRPH)
+![image](https://user-images.githubusercontent.com/6862254/145739884-3f5662db-407c-4961-b50d-2bb674d3ccdd.png)
 
 **Ethnicity**	
 
 Between ethnicities, as the population is around 72% White, we could only accurately analyze food deserts for varying population levels of counties for White vs non-White ethnicities. For areas with mostly White population levels, low access levels seem relatively steady at around 10%--in the lower areas of white population, however, the low access levels rise up to an average of 20% with a range of over 50% in some counties. From this, areas of low white population seem to be at the most risk of containing food deserts.
 
-![img](https://lh4.googleusercontent.com/l2lYzZbI9ySoy_OV4Yjw5kvm2k8uQkhGhwHB_lSVuGMyCj-FQ7MM93rXreo5w-oOYyowvIk7zn5otR5dWe5iic_OF_MWZLqtpMWx_5sK33__nDrSrGYiKBa9S4zWxG8maY1Xd1m9)
+![image](https://user-images.githubusercontent.com/6862254/145739935-c5b34a8f-6508-457a-9e74-b8c7cef4f286.png)
 
 <u>Analysis of a State: New York</u>	
 
@@ -89,19 +89,20 @@ For many of the variables there was so much variability and noise in the data th
 
 After selecting our target variable of interest, in this example Adult Diabetes Rate in 2013 (PCT_DIABETES_ADULTS13) we calculate correlations between diabetes rate and all of the remaining variables. From these correlations we can start to see an interesting relationship where counties with higher poverty rates (child poverty rates in particular) tend to also have higher adult diabetes rates. Similarly counties with a larger portion of students that are eligible for free lunch tend to have higher diabetes rates. In addition, the larger number or SNAP and WIC authorised stores per 1,000 population also tend to be associated with higher diabetes rates. The most surprising variable on this list of the top 5 positive correlations is PCH_VEG_ACRESPTH_07_12 with a correlation of 0.46, suggesting that percent change in vegetable acres harvested tends to be positively correlated with adult diabetes rates.
 
-![image-20211121181254090](C:\Users\Max\AppData\Roaming\Typora\typora-user-images\image-20211121181254090.png)
+![image](https://user-images.githubusercontent.com/6862254/145739015-0d35d4a9-505a-4b09-9ed0-246928e3a85d.png)
+
 
 We’ve also calculated which variables are the most negatively associated with adult diabetes rates. The amount of recreation and fitness facilities (both the number, RECFAC16, and the number per 1000 population, RECFACPTH16) are moderately negatively correlated with adult diabetes rates for counties in New York. In addition, counties with higher median income (MEDHHINC15) tend to have lower diabetes rates, which is unsurprising given the positive correlation between diabetes and poverty rates observed above. The last variable on this list (FMRKT_ANMLPROD18) is quite specific as it measures the number of farmers' markets that report selling animal products, but given its relatively weak correlation of -0.295 it likely doesn’t have as clear of an association with diabetes rates in New York.
 
-![image-20211121181350609](C:\Users\Max\AppData\Roaming\Typora\typora-user-images\image-20211121181350609.png)
+![image](https://user-images.githubusercontent.com/6862254/145739148-fe346189-834c-4b2f-b495-0b5a56663233.png)
 
 The analysis of these correlations helped us narrow our focus from the over 200 variables to only a few variables that are most closely related to diabetes rates that we could then analyze and visualize further. For example, we’ve further analyzed the relationship between child poverty and diabetes rates below. This scatterplot shows a generally positive, linear relationship between these two variables that we could expect based on their correlation coefficient. However, this visualization especially with the inclusion of the Metro indicator and population size we can gain more insight than from just looking at the correlation metrics. For example, we observe two outliers, one being the county with an above average poverty rate of around 25%, but the lowest adult diabetes rate of under 7%. The county with the highest child poverty rates also has the highest adult diabetes rate, but this county is still outlying in the fact that both of its rates are much larger than the other counties. We also observe some interesting relationships between the metro and population variables. For example, non-metro counties tend to have smaller populations than metro counties and metro counties look to be more likely to have lower poverty and diabetes rates because there are more blue dots towards the bottom left of the graph.
 
-![img](https://lh6.googleusercontent.com/xKr82gCwhy1_yO2TadZOA93yW0smyD6d5qeQMD2kx5dJcfl1p3YqTQ0AiiznIU7kyfhmKscVQXxEdNdVlK1rrJ52sMpbTZ9Ce3H9w0WZj_xArzFTBek3mtuxeSvh6AT1OcRloECQ)
+![image](https://user-images.githubusercontent.com/6862254/145740140-1a1376c9-e1f1-4ec8-8aff-b08600f61ef5.png)
 
 As another example, here is a scatterplot between diabetes and the most negatively correlated variable, RECFACPTH16, or the number of recreation and fitness facilities per 1,000 population. Once again the scatter plot confirms the negative correlation between these two variables, but also gives more insight into potential outliers and the added relationship with metro and population. We observe that non-metro counties (red dots) tend to have fewer recreation and fitness facilities than metro counties. One again, the county with the lowest diabetes rate stands out as an outlier and in this case actually has the largest number of fitness facilities per population. 
 
-![img](https://lh5.googleusercontent.com/U0oFpWRwNFwEsAM61ObR7dkphnciNkhDs2xUrWH8wEFzUgjF6BxSv0t_UHkPvY-Zgkz82YsPf5zZJdNFqkCWt7VvY1RrafuW7JWb5oiHBYXQCMUkotmuP96IlKqOd8IPzcPycWbM)
+![image](https://user-images.githubusercontent.com/6862254/145740177-ab21aab7-c4d2-43d6-815d-51f58e8bdd24.png)
 
 While this state and these variables are just one example, the way we’ve designed our program makes this analysis flexible and repeatable in the future to answer numerous new questions. The analysis of correlations in particular have been very valuable in focusing our analysis from the hundreds of potential variables to just those that are the most closely related to whichever variable we’re interested in at the time. This process allowed us, and will allow future users, to prioritize their time in analyzing and digging deeper into the most important variables.
 
@@ -119,6 +120,14 @@ The team decided to assign roles and responsibilities for everyone in the team. 
 ## EXTRA CREDIT
 
 There were inconsistencies related to FIPS code for States and Counties in our dataset. The team decided to web scrape the FIPS code data from USDA’s website to fix the inconsistencies. The team also had used user interaction to analyze specific results. The class for County analysis has functions that would require user interaction to analyze a variable of interest. For instance, Top 10 most significant correlations of a variable with other variables.
+
+## PROJECT RESOURCES
+
+Code and documents developed for the project is available in GitHub and Google drive.
+
+GitHub Repo : https://github.com/manikrajan/fe-eda
+
+Google Drive : https://drive.google.com/drive/u/3/folders/1D4CZXPY-lXHHBmNn4pE4VEumSDWRCkcF
 
 
 ## CONCLUSION
