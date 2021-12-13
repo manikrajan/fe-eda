@@ -1,12 +1,11 @@
-**5100 Project Report**
+# DS5100 FINAL PROJECT REPORT - GROUP 2
 
-**Team 2 Topic: Food Environments**
+**Topic: Food Deserts**
 
 **Grace Lyons (kat3ac), Kaia Lindberg (pkx2ec), Mani Shanmugavel (fdf7gn), Maxwell Jones (maj3js)**
 
 
-
-**INTRODUCTION**
+## INTRODUCTION
 
 For our project, we wished to examine the relationships of food deserts across the US. According to the Annie E. Casey Foundation, food deserts are “geographic areas where residents have few to no convenient options for securing affordable and healthy foods — especially fresh fruits and vegetables.” With this project, we aimed to answer two questions:
 
@@ -15,19 +14,19 @@ For our project, we wished to examine the relationships of food deserts across t
 
 By answering these questions, we hope to find areas where help can be provided appropriately to minimize the effects of food deserts. 
 
-**DATA CLEANING**	
+## DATA CLEANING
 
 We first obtained our data from the USDA where we downloaded a zip file that includes some information on the data, a list of variables (to help decode the variable naming), the primary dataset, and some supplemental state and county data. We then read the csv file into Python so that we could reformat and clean the data. After reading the csv file into Python, we noticed several ways in which we needed to sanitize our data. To start, we noticed that some of the state codes had leading spaces, so we simply deleted those to make the names cleaner. Next, we noticed that there were many counties with very similar or duplicate names (which makes sense, given how many counties there are), so we realized that we could not reliably call on a county’s name to identify a particular county. To fix this, we researched county data and found a table with unique FIPS code identifiers for each county, thus giving us a method of calling on each individual county. We could not find an easily downloadable table, so we used BeautifulSoup to web scrape the FIPS table from the Natural Resources Conservation Service (https://www.nrcs.usda.gov/wps/portal/nrcs/detail/national/home/?cid=nrcs143_013697). We then removed the duplicate state and county columns and could join the FIPS table with our data set. After merging the two, we still had a few things to clean. Here, the FIPS table had a leading zero, so we had to convert it to an int to remove it. Additionally, we noticed that we dropped some data we still wanted to use, such as some of the state level data being dropped due to a lack of it having a FIPS code, so we used a left join to fix this issue. After merging again, the data was kept intact. Next, we reformat the data to have each variable as a column (as opposed to a row) to make the data much more readable. We then split the data into two dataframes--one for state level and one for county level--based on the FIPS code of the value (anything >60 was for state-level). Finally, we saved the cleaned data and are now ready for further analysis and visualizations to achieve our goal of understanding the relationships between these food environment factors.
 
 
 
-**ANALYSIS**	
+## ANALYSIS
 
 As we were analyzing the data we found that we were often repeating similar analysis so we wrote these processes as methods in a class so that we could test, share, and re-use these functions to complete our analysis more easily and efficiently. We didn’t want to include all of these in the initial data cleaning process because some of these decisions may differ depending on the specific analysis. One example is allowing users to select a single state for their analysis. In addition, handling missing values is always an important part of data analysis, but the decision on how to handle them may differ depending on the analysis and question of interest. To allow for flexibility we’ve written a function that drops columns with missing values over a chosen threshold. With this flexibility the analyst can choose their own threshold that makes sense given the question(s) they seek to answer.We also found some inconsistencies such as columns that appeared to be at a county level, but actually had the same value within a state. These “hidden” state level columns may be acceptable for some analysis, but in other cases we may only be interested in variables that are more granular (i.e. at a county level). To address this we’ve also added a function that would identify these columns by calculating the variance within each column within each state and identifying those with zero variance. In addition to identifying these zero variance columns, this function also gives the option of dropping them from the dataframe. This dataset contained over 250 different variables, but some of them were measuring the same metric for different years. For example, PCT_LACCESS_POP10 measures the percentage of the population with low access to stores in 2010 while PCT_LACCESS_POP15 measures the same in 2015. Again, the decision on how to handle these columns could be different for different questions. For some analysis we may be interested in comparing these values from year to year to identify which counties saw the greatest changes so we’d want to keep both of these. However, for other analysis, it may be redundant to include both (as in many cases they’re likely fairly similar and highly correlated) and thus we may be interested in only keeping the latest data (e.g. keep 2015 and drop 2010). Thus, we wrote a function to programmatically identify pairs of columns like these and give the option to remove the older columns. Finally, since one of the goals of our project is to analyze the relationships between variables we included functionality to select a variable of interest for their analysis (e.g. correlations, plotting) and then checks whether the user’s inputted column is in the dataframe. From there the user can calculate which other variables are most positively (or negatively) correlated with their variable of interest, which could give insight into interesting relationships to investigate further. Beyond facilitating our initial exploratory data analysis, these functions were helpful in analyzing and visualizing the data to answer our questions of interest.
 
 
 
-**RESULTS**	
+## RESULTS	
 
 We’ve broken our results into three main sections. First, we’ll discuss our analysis of the characteristics of food deserts. Then, we will showcase how we’ve added functionality to dive deeper to gain insight into food environment factors within a single state. Our final section will analyze poverty persistent counties to gain insight into differences between counties.
 
@@ -106,23 +105,23 @@ As another example, here is a scatterplot between diabetes and the most negative
 
 While this state and these variables are just one example, the way we’ve designed our program makes this analysis flexible and repeatable in the future to answer numerous new questions. The analysis of correlations in particular have been very valuable in focusing our analysis from the hundreds of potential variables to just those that are the most closely related to whichever variable we’re interested in at the time. This process allowed us, and will allow future users, to prioritize their time in analyzing and digging deeper into the most important variables.
 
-**UNIT TESTING** 
+## UNIT TESTING
 
 We developed a class each to clean the data and analyze the data. We performed unit testing on these classes to test the accuracy of the code for data cleaning and analysis. We thoroughly tested cleaning inconsistencies in the dataset like whitespaces using assertEqual(). We have used test fixtures like setup() to set up the test cases.
 We observed that FIPS codes for a few states and counties were missing or unavailable in the dataset during analysis. These inconsistencies were fixed by web scraping. We performed unit testing on the data gathered using web scraping. Testing was done to validate the FIPS code for a State or County.
 
  ![image](https://user-images.githubusercontent.com/6862254/145697359-fc245afd-e313-46b2-9772-01abf7ec744e.png)
 
-**PROJECT MANAGEMENT**
+## PROJECT MANAGEMENT
 
 The team decided to assign roles and responsibilities for everyone in the team. A project plan was prepared, and an owner was assigned for each milestone. The team met weekly over a Zoom call to assess the status of the project. The team discussed the progress and impediments that other team members might have. We, as a team, worked together to resolve any impediments identified. Tools like GitHub and Google Drive were used for collaboration, which proved effective in our development process. This approach enabled us to be more agile and helped us meet deadlines.
 
-**EXTRA CREDIT**
+## EXTRA CREDIT
 
 There were inconsistencies related to FIPS code for States and Counties in our dataset. The team decided to web scrape the FIPS code data from USDA’s website to fix the inconsistencies. The team also had used user interaction to analyze specific results. The class for County analysis has functions that would require user interaction to analyze a variable of interest. For instance, Top 10 most significant correlations of a variable with other variables.
 
 
-**CONCLUSION** 
+## CONCLUSION
 
 ​	Answering our first question, we found that food deserts occur in places of small population, non-metro, West, Midwest, and South regions, and low White populations. To answer our second question, we analyzed New York to demonstrate how our project could be used to analyze specific areas–here, in particular, we found a negative correlation between adult diabetes rate and number of recreational facilities and a positive correlation between child poverty rate and adult diabetes rate, some things someone like a governor could certainly examine to help advise policy decisions.
 
